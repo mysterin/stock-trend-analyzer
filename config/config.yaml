@@ -1,0 +1,34 @@
+# 数据库连接池
+db:
+  host: localhost
+  port: 3306
+  user: root
+  password: '77777777'
+  database: stock
+  pool_name: stock_pool
+  pool_size: 5
+# logging 日志配置
+logging:
+  version: 1
+  disable_existing_loggers: False
+  formatters:
+    simple:
+      format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    detailed:
+      format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s [in %(pathname)s:%(lineno)d]'
+  handlers:
+    console:
+      class: logging.StreamHandler
+      level: DEBUG
+      formatter: simple
+      stream: ext://sys.stdout
+    file_handler:
+      class: logging.FileHandler
+      level: INFO
+      formatter: detailed
+      filename: logs/stock_trend_analyzer.log
+      mode: a
+  root:
+    level: DEBUG
+    handlers: [console, file_handler]
+

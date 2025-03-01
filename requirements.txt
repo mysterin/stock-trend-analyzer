@@ -1,0 +1,5 @@
+akshare
+mysql-connector-python
+dbutils
+PyYAML
+pandas
