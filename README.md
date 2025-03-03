@@ -11,5 +11,5 @@ sqlacodegen mysql://root:123456@localhost:3306/stock --table stock_individual_in
 
 # 启动服务
 ```shell
-uvicorn main:app --reload
+uvicorn app.main:app --port 8080 --reload
 ```
