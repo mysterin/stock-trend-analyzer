@@ -8,3 +8,8 @@ fastapi + sqlalchemy + mysql
 ```shell
 sqlacodegen mysql://root:123456@localhost:3306/stock --table stock_individual_info_em --outfile models/stock_individual_info_em.py
 ```
+
+# 启动服务
+```shell
+uvicorn main:app --reload
+```

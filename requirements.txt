@@ -3,3 +3,6 @@ mysql-connector-python
 dbutils
 PyYAML
 pandas
+sqlalchemy
+uvicorn
+fastapi
