@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from app.routers import stocks
-from app.scheduler.task import scheduler
+from app.scheduler.a_task import scheduler
+from app.core.logging_config import setup_logging
 from contextlib import asynccontextmanager
+import logging
 
-app = FastAPI()
-
-@app.get("/")
-async def home():
-    return {"message": "home page"}
+# 配置日志
+setup_logging()
+logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,6 +18,11 @@ async def lifespan(app: FastAPI):
     scheduler.shutdown()
 
 app = FastAPI(lifespan=lifespan)
+
+@app.get("/")
+async def home():
+    logger.info("home page")
+    return {"message": "home page"}
 
 # 包含路由模块
 app.include_router(stocks.router)

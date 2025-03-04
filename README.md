@@ -6,7 +6,7 @@ fastapi + sqlalchemy + mysql
 
 # 模型生成
 ```shell
-sqlacodegen mysql://root:123456@localhost:3306/stock --table stock_individual_info_em --outfile models/stock_individual_info_em.py
+sqlacodegen mysql+pymysql://root:123456@localhost:3306/stock --table stock_individual_info_em --outfile models/stock_individual_info_em.py
 ```
 
 # 启动服务

@@ -1,0 +1,185 @@
+2025-03-04 22:42:35,238 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:42:35,238 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:42:48,671 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:42:49,317 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:42:49,318 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:42:50,321 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:42:50,929 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:42:50,929 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:43:39,240 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:43:39,891 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:43:39,892 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:43:43,803 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:43:51,986 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:43:51,986 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:43:55,697 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:43:56,335 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:43:56,336 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:44:02,552 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:44:03,188 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:44:03,189 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:44:40,883 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:44:41,562 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:44:41,562 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:44:42,465 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:44:43,094 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:44:43,094 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:44:44,497 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:44:45,150 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:44:45,150 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:44:53,472 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:44:54,091 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:44:54,091 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:44:57,401 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:44:58,001 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:44:58,001 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:45:07,426 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:45:08,065 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:45:08,065 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:45:08,969 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:45:09,574 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:45:09,575 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:45:14,689 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:45:15,319 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:45:15,320 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:45:16,223 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:45:16,786 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:45:16,786 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:45:19,695 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:45:20,345 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:45:20,346 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:45:26,362 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:51:07,883 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:51:07,883 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:51:17,906 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:51:18,527 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:51:18,527 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:51:35,885 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:51:48,380 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:51:48,381 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:51:50,287 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:51:51,002 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:51:51,003 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:51:53,811 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 22:51:54,441 - apscheduler.scheduler - INFO - Added job "scheduler_task" to job store "default"
+2025-03-04 22:51:54,441 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-04 22:51:55,424 - app.main - INFO - home page
+2025-03-04 22:51:58,205 - app.main - INFO - home page
+2025-03-04 22:56:48,289 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-03-04 23:02:43,545 - apscheduler.scheduler - INFO - 1090  - Added job "scheduler_task" to job store "default"
+2025-03-04 23:02:43,545 - apscheduler.scheduler - INFO - 214  - Scheduler started
+2025-03-04 23:02:47,739 - app.main - INFO - 24  - home page
+2025-03-04 23:03:05,851 - sqlalchemy.engine.Engine - INFO - 1843  - SELECT DATABASE()
+2025-03-04 23:03:05,852 - sqlalchemy.engine.Engine - INFO - 1843  - [raw sql] {}
+2025-03-04 23:03:05,853 - sqlalchemy.engine.Engine - INFO - 1843  - SELECT @@sql_mode
+2025-03-04 23:03:05,853 - sqlalchemy.engine.Engine - INFO - 1843  - [raw sql] {}
+2025-03-04 23:03:05,854 - sqlalchemy.engine.Engine - INFO - 1843  - SELECT @@lower_case_table_names
+2025-03-04 23:03:05,854 - sqlalchemy.engine.Engine - INFO - 1843  - [raw sql] {}
+2025-03-04 23:03:05,855 - sqlalchemy.engine.Engine - INFO - 2699  - BEGIN (implicit)
+2025-03-04 23:03:05,860 - sqlalchemy.engine.Engine - INFO - 1843  - SELECT stock_individual_info_em.id AS stock_individual_info_em_id, stock_individual_info_em.total_market_value AS stock_individual_info_em_total_market_value, stock_individual_info_em.circulating_market_value AS stock_individual_info_em_circulating_market_value, stock_individual_info_em.industry AS stock_individual_info_em_industry, stock_individual_info_em.listing_date AS stock_individual_info_em_listing_date, stock_individual_info_em.stock_code AS stock_individual_info_em_stock_code, stock_individual_info_em.stock_name AS stock_individual_info_em_stock_name, stock_individual_info_em.total_shares AS stock_individual_info_em_total_shares, stock_individual_info_em.circulating_shares AS stock_individual_info_em_circulating_shares 
+FROM stock_individual_info_em 
+WHERE stock_individual_info_em.stock_code = %(stock_code_1)s 
+ LIMIT %(param_1)s
+2025-03-04 23:03:05,860 - sqlalchemy.engine.Engine - INFO - 1843  - [generated in 0.00088s] {'stock_code_1': '000001', 'param_1': 1}
+2025-03-04 23:03:05,863 - sqlalchemy.engine.Engine - INFO - 2702  - ROLLBACK
+2025-03-04 23:04:07,642 - apscheduler.scheduler - INFO - 245  - Scheduler has been shut down
+2025-03-04 23:04:47,885 - apscheduler.scheduler - INFO - 1090  - Added job "scheduler_task" to job store "default"
+2025-03-04 23:04:47,885 - apscheduler.scheduler - INFO - 214  - Scheduler started
+2025-03-04 23:04:54,703 - apscheduler.scheduler - INFO - 245  - Scheduler has been shut down
+2025-03-04 23:05:48,202 - apscheduler.scheduler - INFO - 1090  - Added job "scheduler_task" to job store "default"
+2025-03-04 23:05:48,202 - apscheduler.scheduler - INFO - 214  - Scheduler started
+2025-03-04 23:05:55,620 - apscheduler.scheduler - INFO - 245  - Scheduler has been shut down
+2025-03-04 23:52:57,790 - apscheduler.scheduler - INFO - 1090  - Added job "sync_stock_zh_a_spot_em" to job store "default"
+2025-03-04 23:52:57,790 - apscheduler.scheduler - INFO - 214  - Scheduler started
+2025-03-04 23:53:02,001 - apscheduler.scheduler - INFO - 245  - Scheduler has been shut down
+2025-03-04 23:53:35,684 - apscheduler.scheduler - INFO - 1090  - Added job "sync_stock_zh_a_spot_em" to job store "default"
+2025-03-04 23:53:35,684 - apscheduler.scheduler - INFO - 214  - Scheduler started
+2025-03-04 23:55:44,471 - apscheduler.scheduler - INFO - 245  - Scheduler has been shut down
+2025-03-04 23:56:01,984 - apscheduler.scheduler - INFO - 1090  - Added job "sync_stock_zh_a_spot_em" to job store "default"
+2025-03-04 23:56:01,984 - apscheduler.scheduler - INFO - 214  - Scheduler started
+2025-03-04 23:57:00,000 - apscheduler.executors.default - INFO - 129  - Running job "sync_stock_zh_a_spot_em (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*'], next run at: 2025-03-04 23:58:00 CST)" (scheduled at 2025-03-04 23:57:00+08:00)
+2025-03-04 23:57:00,001 - root - INFO - 16  - sync_stock_zh_a_spot_em
+2025-03-04 23:57:01,667 - root - INFO - 18  -         序号      代码     名称    最新价     涨跌幅    涨跌额        成交量  ...    市净率           总市值          流通市值    涨速  5分钟涨跌  60日涨跌幅  年初至今涨跌幅
+0        1  301557    N常友  89.99  211.60  61.11    92696.0  ...   4.00  3.987265e+09  9.970892e+08 -0.01  -0.01  211.60   211.60
+1        2  603409    N汇通  50.81  110.13  26.63   232895.0  ...   4.44  6.403584e+09  1.568804e+09  0.00  -0.39  110.13   110.13
+2        3  832149    利尔达  17.29   30.00   3.99   433147.0  ...  10.49  7.289983e+09  1.995451e+09  0.00   0.00   37.44    94.93
+3        4  837006   晟楠科技  31.39   29.98   7.24   162694.0  ...   8.85  2.834115e+09  1.076422e+09  0.00   0.00    7.02    27.60
+4        5  831167    鑫汇科  33.87   29.97   7.81    45497.0  ...   6.26  1.692922e+09  9.740556e+08  0.00   0.00    5.91    69.52
+...    ...     ...    ...    ...     ...    ...        ...  ...    ...           ...           ...   ...    ...     ...      ...
+5689  5690  000042   中洲控股   6.71  -10.05  -0.75   210326.0  ...   0.86  4.461017e+09  4.456320e+09  0.00   0.00   24.26    50.11
+5690  5691  870436   大地电气  25.53  -10.20  -2.90   103245.0  ...   6.16  2.411972e+09  2.268804e+09  0.43   0.00   -6.31    51.78
+5691  5692  920106   林泰新材  93.35  -11.93 -12.65    31379.0  ...   8.44  3.722565e+09  1.130071e+09 -0.26   0.90  370.99    55.58
+5692  5693  300108  *ST吉药   1.12  -12.50  -0.16  1690421.0  ...  -1.46  7.459364e+08  7.344058e+08  0.90   1.82  -50.88   -12.50
+5693  5694  300117  *ST嘉寓   0.89  -12.75  -0.13   985295.0  ...  -0.38  6.379164e+08  6.379164e+08  0.00  -1.11  -30.47   -18.35
+
+[5694 rows x 23 columns]
+2025-03-04 23:57:01,703 - apscheduler.executors.default - ERROR - 145  - Job "sync_stock_zh_a_spot_em (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*'], next run at: 2025-03-04 23:58:00 CST)" raised an exception
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/stock-trend-analyzer/lib/python3.12/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/project/stock-trend-analyzer/app/scheduler/a_task.py", line 19, in sync_stock_zh_a_spot_em
+    stock_zh_a_spot_em_crud.delete_all(db)
+  File "/mnt/d/project/stock-trend-analyzer/app/crud/stock_zh_a_spot_em.py", line 8, in delete_all
+    db.query(StockZhASpotEm).delete()
+    ^^^^^^^^
+AttributeError: 'Depends' object has no attribute 'query'
+2025-03-04 23:57:17,053 - apscheduler.scheduler - INFO - 245  - Scheduler has been shut down
+2025-03-05 00:26:59,505 - apscheduler.scheduler - INFO - 1090  - Added job "sync_stock_zh_a_spot_em" to job store "default"
+2025-03-05 00:26:59,506 - apscheduler.scheduler - INFO - 214  - Scheduler started
+2025-03-05 00:27:00,004 - apscheduler.executors.default - INFO - 129  - Running job "sync_stock_zh_a_spot_em (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*'], next run at: 2025-03-05 00:27:00 CST)" (scheduled at 2025-03-05 00:27:00+08:00)
+2025-03-05 00:27:00,005 - root - INFO - 17  - sync_stock_zh_a_spot_em
+2025-03-05 00:27:00,948 - root - INFO - 19  -         序号      代码     名称    最新价     涨跌幅    涨跌额        成交量  ...    市净率           总市值          流通市值    涨速  5分钟涨跌  60日涨跌幅  年初至今涨跌幅
+0        1  301557    N常友  89.99  211.60  61.11    92696.0  ...   4.00  3.987265e+09  9.970892e+08 -0.01  -0.01  211.60   211.60
+1        2  603409    N汇通  50.81  110.13  26.63   232895.0  ...   4.44  6.403584e+09  1.568804e+09  0.00  -0.39  110.13   110.13
+2        3  832149    利尔达  17.29   30.00   3.99   433147.0  ...  10.49  7.289983e+09  1.995451e+09  0.00   0.00   37.44    94.93
+3        4  837006   晟楠科技  31.39   29.98   7.24   162694.0  ...   8.85  2.834115e+09  1.076422e+09  0.00   0.00    7.02    27.60
+4        5  831167    鑫汇科  33.87   29.97   7.81    45497.0  ...   6.26  1.692922e+09  9.740556e+08  0.00   0.00    5.91    69.52
+...    ...     ...    ...    ...     ...    ...        ...  ...    ...           ...           ...   ...    ...     ...      ...
+5689  5690  000042   中洲控股   6.71  -10.05  -0.75   210326.0  ...   0.86  4.461017e+09  4.456320e+09  0.00   0.00   24.26    50.11
+5690  5691  870436   大地电气  25.53  -10.20  -2.90   103245.0  ...   6.16  2.411972e+09  2.268804e+09  0.43   0.00   -6.31    51.78
+5691  5692  920106   林泰新材  93.35  -11.93 -12.65    31379.0  ...   8.44  3.722565e+09  1.130071e+09 -0.26   0.90  370.99    55.58
+5692  5693  300108  *ST吉药   1.12  -12.50  -0.16  1690421.0  ...  -1.46  7.459364e+08  7.344058e+08  0.90   1.82  -50.88   -12.50
+5693  5694  300117  *ST嘉寓   0.89  -12.75  -0.13   985295.0  ...  -0.38  6.379164e+08  6.379164e+08  0.00  -1.11  -30.47   -18.35
+
+[5694 rows x 23 columns]
+2025-03-05 00:27:00,990 - sqlalchemy.engine.Engine - INFO - 1843  - SELECT DATABASE()
+2025-03-05 00:27:00,990 - sqlalchemy.engine.Engine - INFO - 1843  - [raw sql] {}
+2025-03-05 00:27:00,991 - sqlalchemy.engine.Engine - INFO - 1843  - SELECT @@sql_mode
+2025-03-05 00:27:00,992 - sqlalchemy.engine.Engine - INFO - 1843  - [raw sql] {}
+2025-03-05 00:27:00,993 - sqlalchemy.engine.Engine - INFO - 1843  - SELECT @@lower_case_table_names
+2025-03-05 00:27:00,993 - sqlalchemy.engine.Engine - INFO - 1843  - [raw sql] {}
+2025-03-05 00:27:00,994 - sqlalchemy.engine.Engine - INFO - 2699  - BEGIN (implicit)
+2025-03-05 00:27:00,995 - sqlalchemy.engine.Engine - INFO - 1843  - DELETE FROM stock_zh_a_spot_em
+2025-03-05 00:27:00,995 - sqlalchemy.engine.Engine - INFO - 1843  - [generated in 0.00027s] {}
+2025-03-05 00:27:00,996 - sqlalchemy.engine.Engine - INFO - 2705  - COMMIT
+2025-03-05 00:27:01,006 - apscheduler.executors.default - ERROR - 145  - Job "sync_stock_zh_a_spot_em (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*'], next run at: 2025-03-05 00:28:00 CST)" raised an exception
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/stock-trend-analyzer/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: '市盈率(动态)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/stock-trend-analyzer/lib/python3.12/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/project/stock-trend-analyzer/app/scheduler/a_task.py", line 36, in sync_stock_zh_a_spot_em
+    pe_ratio=row['市盈率(动态)'],
+             ~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/envs/stock-trend-analyzer/lib/python3.12/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/envs/stock-trend-analyzer/lib/python3.12/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/envs/stock-trend-analyzer/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: '市盈率(动态)'
+2025-03-05 00:27:34,694 - apscheduler.scheduler - INFO - 245  - Scheduler has been shut down

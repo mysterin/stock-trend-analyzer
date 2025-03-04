@@ -14,10 +14,11 @@ class Settings(BaseSettings):
 
     # 其他配置
     PROJECT_NAME: str = "stock-trend-analyzer"
+    LOGGING_CONFIG: str = "config/logging_config.yaml"  # 日志配置文件
     
     # 从环境变量加载配置
     class Config:
-        env_file = ".env"  # 指定环境变量文件
+        env_file = "config/.env"  # 指定环境变量文件
         env_file_encoding = "utf-8"  # 指定文件编码
 
 # 创建配置实例
