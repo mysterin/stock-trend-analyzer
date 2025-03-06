@@ -6,3 +6,11 @@ def get_stock_individual_info_by_code(db: Session, stock_code: str):
 
 def get_stock_individual_info_by_name(db: Session, stock_name: str):
     return db.query(StockIndividualInfoEm).filter(StockIndividualInfoEm.stock_name == stock_name).first()
+
+def insert(db: Session, stock: StockIndividualInfoEm):
+    db.add(stock)
+    db.commit()
+
+def update(db: Session, stock: StockIndividualInfoEm):
+    db.query(StockIndividualInfoEm).filter(StockIndividualInfoEm.stock_code == stock.stock_code).update(stock)
+    db.commit()

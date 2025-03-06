@@ -1,22 +1,23 @@
 from fastapi import Depends
+import logging
+import pandas as pd
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 import akshare as ak
 from datetime import datetime
 from app.database import SessionLocal
 from sqlalchemy.orm import Session
-import app.crud.stock_zh_a_spot_em as stock_zh_a_spot_em_crud
 from app.models.stock_zh_a_spot_em import StockZhASpotEm
-import logging
-import pandas as pd
+from app.models.stock_zh_a_hist import StockZhAHist
+from app.models.stock_individual_info_em import StockIndividualInfoEm
+from app.crud import stock_zh_a_spot_em as spot_crud, stock_zh_a_hist as hist_crud, stock_individual_info_em as individual_crud
 
 logger = logging.getLogger(__name__)
 db = SessionLocal()
 
 # 每小时同步股票实时行情数据
-def sync_stock_zh_a_spot_em():
+def sync_stock_zh_a_spot_em_job():
     stock_zh_a_spot_em_df = ak.stock_zh_a_spot_em()
-    stock_zh_a_spot_em_crud.delete_all(db)
     for index, row in stock_zh_a_spot_em_df.iterrows():
         # logger.info(f'index: {index}, row: {row}')
         stockXhASpotEm = StockZhASpotEm(
@@ -45,7 +46,62 @@ def sync_stock_zh_a_spot_em():
             change_ytd=row['年初至今涨跌幅'] if pd.notna(row['年初至今涨跌幅']) else None,
             date_time=datetime.now()
         )
-        stock_zh_a_spot_em_crud.insert(db, stockXhASpotEm)
+        # 数据存在则更新，不存在则插入
+        if spot_crud.get_stock_individual_info_by_code(db, row['代码']):
+            spot_crud.update(db, stockXhASpotEm)
+        else:
+            spot_crud.insert(db, stockXhASpotEm)
+        # 同步个股信息
+        sync_stock_individual_info_em_job(stockXhASpotEm.stock_code)
+
+# 同步指定股票和开始时间到现在历史行情数据
+def sync_stock_zh_a_hist_job(stock_code: str, start_date: str):
+    stock_zh_a_hist_df = ak.stock_zh_a_hist(symbol=stock_code, start_date=start_date)
+    for index, row in stock_zh_a_hist_df.iterrows():
+        stockXhAHist = StockZhAHist(
+            stock_code=row['股票代码'],
+            trade_date=row['日期'],
+            open_price=row['开盘'],
+            close_price=row['收盘'],
+            highest_price=row['最高'],
+            lowest_price=row['最低'],
+            volume=row['成交量'],
+            turnover=row['成交额'],
+            amplitude=row['振幅'],
+            change_percentage=row['涨跌幅'],
+            change_amount=row['涨跌额'],
+            turnover_rate=row['换手率'],
+        )
+        # 数据存在则更新，不存在则插入
+        if hist_crud.get_stock_by_code_and_trade_date(db, stock_code, row['日期']):
+            hist_crud.update(db, stockXhAHist)
+        else:
+            hist_crud.insert(db, stockXhAHist)
+
+
+def sync_stock_individual_info_em_job(stock_code: str):
+    stock_individual_info_em_df = ak.stock_individual_info_em(symbol=stock_code)
+    # 行列转换
+    stock_individual_info_em_df = stock_individual_info_em_df.T
+    # 取第二行数据
+    row = stock_individual_info_em_df.iloc[1]
+    stockIndividualInfoEm = StockIndividualInfoEm(
+        stock_code=row[1],
+        stock_name=row[2],
+        total_shares=row[3],
+        circulating_shares=row[4],
+        total_market_value=row[5],
+        circulating_market_value=row[6],
+        industry=row[7],
+        listing_date=row[8]
+    )
+    logger.info(f'stockIndividualInfoEm: {stockIndividualInfoEm}')
+    if individual_crud.get_stock_individual_info_by_code(db, stock_code=stock_code):
+        individual_crud.update(stockIndividualInfoEm)
+    else:
+        individual_crud.insert(stockIndividualInfoEm)
+
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(sync_stock_zh_a_spot_em, CronTrigger.from_crontab("0 * * * *"))
+# scheduler.add_job(sync_stock_zh_a_spot_em_job, CronTrigger.from_crontab("0 * * * *"))
+sync_stock_zh_a_spot_em_job()

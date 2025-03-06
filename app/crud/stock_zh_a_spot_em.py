@@ -11,3 +11,7 @@ def delete_all(db: Session):
 def insert(db: Session, stock: StockZhASpotEm):
     db.add(stock)
     db.commit()
+
+def update(db: Session, stock: StockZhASpotEm):
+    db.query(StockZhASpotEm).filter(StockZhASpotEm.stock_code == stock.stock_code).update(stock)
+    db.commit()
