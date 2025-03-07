@@ -12,5 +12,11 @@ def insert(db: Session, stock: StockIndividualInfoEm):
     db.commit()
 
 def update(db: Session, stock: StockIndividualInfoEm):
-    db.query(StockIndividualInfoEm).filter(StockIndividualInfoEm.stock_code == stock.stock_code).update(stock)
+    # stock 转成字典
+    update_values = stock.__dict__.copy()
+    update_values.pop('id', None)  # 删除字典中的 id 键值对
+    update_values.pop('stock_code', None)  # 删除字典中的 stock_code 键值对
+    # 删除字典中的 _sa_instance_state 键值对
+    update_values.pop('_sa_instance_state', None)
+    db.query(StockIndividualInfoEm).filter(StockIndividualInfoEm.stock_code == stock.stock_code).update(update_values, synchronize_session=False)
     db.commit()

@@ -13,5 +13,9 @@ def insert(db: Session, stock: StockZhASpotEm):
     db.commit()
 
 def update(db: Session, stock: StockZhASpotEm):
-    db.query(StockZhASpotEm).filter(StockZhASpotEm.stock_code == stock.stock_code).update(stock)
+    update_values = stock.__dict__.copy()
+    update_values.pop('id', None)
+    update_values.pop('stock_code', None)
+    update_values.pop('_sa_instance_state', None)
+    db.query(StockZhASpotEm).filter(StockZhASpotEm.stock_code == stock.stock_code).update(update_values, synchronize_session=False)
     db.commit()
