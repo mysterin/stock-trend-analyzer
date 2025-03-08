@@ -11,15 +11,20 @@ from app.models.stock_zh_a_spot_em import StockZhASpotEm
 from app.models.stock_zh_a_hist import StockZhAHist
 from app.models.stock_individual_info_em import StockIndividualInfoEm
 from app.crud import stock_zh_a_spot_em as spot_crud, stock_zh_a_hist as hist_crud, stock_individual_info_em as individual_crud
+from app.core.decorators import log_execution_time
 
 logger = logging.getLogger(__name__)
 db = SessionLocal()
 
+'''
+A 股相关定时任务
+'''
+
 # 每小时同步股票实时行情数据
+@log_execution_time
 def sync_stock_zh_a_spot_em_job():
     stock_zh_a_spot_em_df = ak.stock_zh_a_spot_em()
     for index, row in stock_zh_a_spot_em_df.iterrows():
-        # logger.info(f'index: {index}, row: {row}')
         stockXhASpotEm = StockZhASpotEm(
             id=row['序号'],
             stock_code=row['代码'],
@@ -51,11 +56,14 @@ def sync_stock_zh_a_spot_em_job():
             spot_crud.update(db, stockXhASpotEm)
         else:
             spot_crud.insert(db, stockXhASpotEm)
-        # 同步个股信息
-        sync_stock_individual_info_em_job(stockXhASpotEm.stock_code)
 
 # 同步指定股票和开始时间到现在历史行情数据
+@log_execution_time
 def sync_stock_zh_a_hist_job(stock_code: str, start_date: str):
+    '''
+    :param stock_code: 股票代码
+    :param start_date: 开始日期
+    '''
     stock_zh_a_hist_df = ak.stock_zh_a_hist(symbol=stock_code, start_date=start_date)
     for index, row in stock_zh_a_hist_df.iterrows():
         stockXhAHist = StockZhAHist(
@@ -73,35 +81,38 @@ def sync_stock_zh_a_hist_job(stock_code: str, start_date: str):
             turnover_rate=row['换手率'],
         )
         # 数据存在则更新，不存在则插入
-        if hist_crud.get_stock_by_code_and_trade_date(db, stock_code, row['日期']):
+        if hist_crud.get_stock_by_code_and_trade_date(db, stock_code, stockXhAHist.trade_date):
             hist_crud.update(db, stockXhAHist)
         else:
             hist_crud.insert(db, stockXhAHist)
 
-
+# 同步个股信息
+@log_execution_time
 def sync_stock_individual_info_em_job(stock_code: str):
+    # 接口可能有频率限制
     stock_individual_info_em_df = ak.stock_individual_info_em(symbol=stock_code)
     # 行列转换
     stock_individual_info_em_df = stock_individual_info_em_df.T
     # 取第二行数据
     row = stock_individual_info_em_df.iloc[1]
+    logger.info(f'row: {row}')
     stockIndividualInfoEm = StockIndividualInfoEm(
-        stock_code=row[1],
-        stock_name=row[2],
-        total_shares=row[3],
-        circulating_shares=row[4],
-        total_market_value=row[5],
-        circulating_market_value=row[6],
-        industry=row[7],
-        listing_date=row[8]
+        stock_code=row[0],
+        stock_name=row[1],
+        total_shares=row[2],
+        circulating_shares=row[3],
+        total_market_value=row[4],
+        circulating_market_value=row[5],
+        industry=row[6],
+        listing_date=row[7]
     )
     logger.info(f'stockIndividualInfoEm: {stockIndividualInfoEm}')
     if individual_crud.get_stock_individual_info_by_code(db, stock_code=stock_code):
-        individual_crud.update(stockIndividualInfoEm)
+        individual_crud.update(db, stockIndividualInfoEm)
     else:
-        individual_crud.insert(stockIndividualInfoEm)
+        individual_crud.insert(db, stockIndividualInfoEm)
 
 
 scheduler = BackgroundScheduler()
 # scheduler.add_job(sync_stock_zh_a_spot_em_job, CronTrigger.from_crontab("0 * * * *"))
-sync_stock_zh_a_spot_em_job()
+# sync_stock_zh_a_spot_em_job()

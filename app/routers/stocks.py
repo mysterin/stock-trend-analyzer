@@ -22,5 +22,6 @@ def get_stock_info_by_code(stock_code: str, db: Session = Depends(get_db)):
 
 # 同步指定股票历史行情数据
 @router.get("/stocks/hist/sync")
-def sync_stock_hist_data(stock_code: str, start_date: str, db: Session = Depends(get_db)):
-    return {"message": "Sync stock historical data successfully"}
+def sync_stock_hist_data(stock_code: str, start_date: str):
+    sync_stock_zh_a_hist_job(stock_code, start_date)
+    return {"message": "同步指定股票历史行情数据成功"}

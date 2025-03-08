@@ -1,12 +1,13 @@
+from app.core.logging_config import setup_logging
+# 配置日志
+setup_logging()
+
 from fastapi import FastAPI
 from app.routers import stocks
 from app.scheduler.a_task import scheduler
-from app.core.logging_config import setup_logging
 from contextlib import asynccontextmanager
 import logging
 
-# 配置日志
-setup_logging()
 logger = logging.getLogger(__name__)
 
 @asynccontextmanager
