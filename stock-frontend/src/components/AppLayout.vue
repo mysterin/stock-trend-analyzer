@@ -24,7 +24,7 @@
       </el-menu>
     </el-aside>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header class="header-with-divider">{{ headerTitle }}</el-header>
       <el-main>
         <router-view></router-view>
       </el-main>
@@ -34,7 +34,7 @@
 
 <script>
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 export default {
   data() {
@@ -44,11 +44,34 @@ export default {
   },
   setup() {
     const router = useRouter()
+    const route = useRoute()
     const menuRoutes = computed(() => {
       return router.options.routes[0].children
     })
+
+    const headerTitle = computed(() => {
+      const pathSegments = route.path.split('/').filter(segment => segment)
+      const titles = []
+      let currentRoutes = router.options.routes[0].children
+
+      for (const segment of pathSegments) {
+        const currentRoute = currentRoutes.find(r => r.path === segment)
+        if (currentRoute) {
+          titles.push(currentRoute.meta.title)
+          if (currentRoute.children) {
+            currentRoutes = currentRoute.children
+          } else {
+            break
+          }
+        }
+      }
+
+      return titles.join(' / ')
+    })
+
     return {
-      menuRoutes
+      menuRoutes,
+      headerTitle
     }
   },
   methods: {
@@ -85,5 +108,7 @@ export default {
 </script>
 
 <style>
-/* 你的样式 */
+.header-with-divider {
+  border-bottom: 1px solid #dcdfe6; /* 分界线的颜色 */
+}
 </style>

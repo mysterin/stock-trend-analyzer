@@ -7,6 +7,7 @@ from app.routers import stocks
 from app.scheduler.a_task import scheduler
 from contextlib import asynccontextmanager
 import logging
+from app.middleware import LoggingMiddleware
 
 logger = logging.getLogger(__name__)
 
@@ -20,10 +21,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-@app.get("/")
-async def home():
-    logger.info("home page")
-    return {"message": "home page"}
-
+# 添加中间件
+app.add_middleware(LoggingMiddleware)
 # 包含路由模块
 app.include_router(stocks.router)

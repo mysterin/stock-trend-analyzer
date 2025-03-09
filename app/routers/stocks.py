@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.crud import stock_individual_info_em as individual_crud, stock_zh_a_spot_em as spot_crud
 from app.scheduler.a_task import sync_stock_zh_a_hist_job, sync_stock_zh_a_spot_em_job
+from app.routers.response import ResponseModel, ResponseCode
 
 router = APIRouter()
 
@@ -25,3 +26,9 @@ def get_stock_info_by_code(stock_code: str, db: Session = Depends(get_db)):
 def sync_stock_hist_data(stock_code: str, start_date: str):
     sync_stock_zh_a_hist_job(stock_code, start_date)
     return {"message": "同步指定股票历史行情数据成功"}
+
+# 分页查询股票实时行情数据
+@router.post("/stocks/spot/list")
+def get_stock_spot_list(params: dict, db: Session = Depends(get_db)):
+    query_result = spot_crud.get_stock_spot_list(db, params)
+    return ResponseModel.from_code(ResponseCode.SUCCESS, data=query_result)
