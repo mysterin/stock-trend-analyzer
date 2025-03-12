@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import asc, desc
 from app.models.stock_zh_a_spot_em import StockZhASpotEm
-from app.models.schemas import StockZhASpotEmList, StockZhASpotEm as StockZhASpotEmSchema
+from app.schemas.stock_zh_a_spot_schemas import StockZhASpotEmList, StockZhASpotEm as StockZhASpotEmSchema
 
 def get_stock_individual_info_by_code(db: Session, stock_code: str):
     return db.query(StockZhASpotEm).filter(StockZhASpotEm.stock_code == stock_code).first()

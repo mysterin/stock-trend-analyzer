@@ -1,5 +1,6 @@
 import logging
-from math import log
+import os
+import importlib
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.models.base import Base
@@ -25,11 +26,17 @@ def get_db():
     finally:
         db.close()
 
+def import_all_models():
+    models_dir = os.path.join(os.path.dirname(__file__), 'models')
+    for filename in os.listdir(models_dir):
+        if filename.endswith('.py') and filename != '__init__.py':
+            module_name = f"app.models.{filename[:-3]}"
+            importlib.import_module(module_name)
+
 # 根据 models 类创建数据库表
 def create_all():
+    logger.info("Importing all models")
+    import_all_models()
     logger.info("Creating all tables")
     Base.metadata.create_all(bind=engine)
     logger.info("All tables created")
-
-if __name__ == "__main__":
-    create_all()

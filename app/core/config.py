@@ -9,9 +9,6 @@ class Settings(BaseSettings):
     DATABASE_POOL_RECYCLE: int = 1800  # 连接的最长使用时间（秒）
     DATABASE_POOL_TIMEOUT: int = 30  # 池中没有连接时等待的时间（秒）
 
-    # API 配置
-    API_V1_STR: str = "/api/v1"
-
     # 其他配置
     PROJECT_NAME: str = "stock-trend-analyzer"
     LOGGING_CONFIG: str = "config/logging_config.yaml"  # 日志配置文件
