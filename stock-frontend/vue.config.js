@@ -10,6 +10,10 @@ module.exports = defineConfig({
         changeOrigin: true,
         pathRewrite: { '^/api': '' }
       }
-    }
+    },
+    allowedHosts: [
+      'localhost',
+      'mysterin.xicp.net'
+    ]
   }
 })

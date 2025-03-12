@@ -7,7 +7,7 @@ from app.routers.response import ResponseModel, ResponseCode
 
 router = APIRouter()
 
-# 同步所有股票数据
+# 同步所有股票实时数据
 @router.get("/stocks/sync")
 def sync_all_stocks(db: Session = Depends(get_db)):
     sync_stock_zh_a_spot_em_job()

@@ -1,13 +1,10 @@
 from typing import Optional
 
 from sqlalchemy import BigInteger, DECIMAL, DateTime, Index, String, text
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column
+from app.models.base import Base
 import datetime
 import decimal
-
-class Base(DeclarativeBase):
-    pass
-
 
 class StockZhASpotEm(Base):
     __tablename__ = 'stock_zh_a_spot_em'

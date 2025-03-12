@@ -2,12 +2,9 @@ from typing import Optional
 
 from sqlalchemy import BigInteger, DECIMAL, Date, Index, String
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from app.models.base import Base
 import datetime
 import decimal
-
-class Base(DeclarativeBase):
-    pass
-
 
 class StockIndividualInfoEm(Base):
     __tablename__ = 'stock_individual_info_em'

@@ -2,6 +2,7 @@ from app.core.logging_config import setup_logging
 # 配置日志
 setup_logging()
 
+from app.database import create_all
 from fastapi import FastAPI
 from app.routers import stocks
 from app.scheduler.a_task import scheduler
@@ -10,6 +11,8 @@ import logging
 from app.middleware import LoggingMiddleware
 
 logger = logging.getLogger(__name__)
+
+create_all()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

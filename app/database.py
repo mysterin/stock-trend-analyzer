@@ -1,7 +1,13 @@
+import logging
+from math import log
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from app.models.base import Base
 from app.core.config import settings
 
+logger = logging.getLogger(__name__)
+
+# 创建数据库引擎
 engine = create_engine(settings.DATABASE_URL, 
                        echo=settings.DATABASE_ECHO, 
                        pool_size=settings.DATABASE_POOL_SIZE,
@@ -18,3 +24,12 @@ def get_db():
         yield db
     finally:
         db.close()
+
+# 根据 models 类创建数据库表
+def create_all():
+    logger.info("Creating all tables")
+    Base.metadata.create_all(bind=engine)
+    logger.info("All tables created")
+
+if __name__ == "__main__":
+    create_all()

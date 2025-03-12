@@ -114,5 +114,5 @@ def sync_stock_individual_info_em_job(stock_code: str):
 
 
 scheduler = BackgroundScheduler()
-# scheduler.add_job(sync_stock_zh_a_spot_em_job, CronTrigger.from_crontab("0 * * * *"))
+scheduler.add_job(sync_stock_zh_a_spot_em_job, CronTrigger.from_crontab("* * * * *"))
 # sync_stock_zh_a_spot_em_job()
