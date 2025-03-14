@@ -12,6 +12,7 @@ from app.middleware import LoggingMiddleware
 
 logger = logging.getLogger(__name__)
 
+# 创建所有表
 create_all()
 
 @asynccontextmanager

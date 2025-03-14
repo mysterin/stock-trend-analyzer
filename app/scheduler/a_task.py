@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 from app.models.stock_zh_a_spot_em import StockZhASpotEm
 from app.models.stock_zh_a_hist import StockZhAHist
 from app.models.stock_individual_info_em import StockIndividualInfoEm
-from app.crud import stock_zh_a_spot_em as spot_crud, stock_zh_a_hist as hist_crud, stock_individual_info_em as individual_crud
+from app.crud import crud_stock_individual_info_em as individual_crud, crud_stock_zh_a_hist as hist_crud, crud_stock_zh_a_spot_em as spot_crud
 from app.core.decorators import log_execution_time
 
 logger = logging.getLogger(__name__)
